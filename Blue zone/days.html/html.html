@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
+    <style>
+        #btn {
+            background-color: red;
+            border: none;
+            margin: 100px;
+            letter-spacing: 0.1rem;
+            padding: 20px 50px;
+            /* color: white; */
+            font-size: 40px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px 3px rgb(212, 81, 81);
+            color: white;
+            text-shadow: 0px 0px 3px  black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn" onclick=myfunction()>Follow</button>
+
+
+</body>
+<script>
+    function myfunction() {
+        let btn = document.getElementById('btn');
+        if (btn.innerHTML == 'Follow') {
+            btn.innerHTML = 'following';
+            btn.style.color = 'red'
+            btn.style.background = 'white'
+            // console.log(btn.innerHTML);
+        } else if (btn.innerHTML == 'following') {
+            btn.innerHTML = 'Follow';
+            btn.style.color = 'white';
+            
+            btn.style.background = 'red';
+        }
+        console.log(btn.innerHTML)
+
+    }
+</script>
+
+</html>

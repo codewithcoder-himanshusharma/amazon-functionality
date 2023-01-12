@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;        
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto  ;
+            box-shadow:  1px 5px 10px 5px  rgb(158, 104, 213);
+            /* border: 2px solid black; */
+            width: 90%;
+        }    
+        #left{
+            display: flex;            
+            flex-direction: column;
+            flex: 50%;
+            
+        }
+        #right{
+            display: flex;            
+            flex-direction: column;
+            flex: 60%;
+        }
+        .ma{ 
+            margin: 10px ;
+            padding: 10px;
+            border-radius: 10px;
+            /* border-style: none; */
+            background-color: aliceblue;
+            border: 0px solid rgb(158, 104, 213);
+            box-shadow: 1px 5px 10px  rgb(158, 104, 213);
+            
+            outline: none;
+        }
+
+        .continer{
+        }
+        
+        #button{
+            background-color: rgb(179, 116, 216);            
+            border-style: none;
+            color: white;
+            font-size: bold;
+            box-shadow: 1px 5px 10px  rgb(158, 104, 213);
+            
+        }
+
+        #button:hover{
+            opacity: .9;
+        } 
+        #table{
+            color: rgb(158, 104, 213);
+            text-shadow: 1px 5px 10px  rgb(158, 104, 213);
+            text-align: center;
+        }
+        #head{
+            padding: 40px 40px;
+            text-shadow: 1px 5px 10px  rgb(158, 104, 213);
+            color: rgb(158, 104, 213);
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <h1 id="head">New Student fill the Form</h1>
+        <!-- <ul class="cap"><li><i class="fa-solid fa-graduation-cap"></i></li></ul> -->
+    <div class="main">
+    <div id="left">
+        <!-- <i class="fa-solid fa-trash-can"></i> -->
+        <input id="name" class="ma" type="text" placeholder="Name" > 
+        <input id="idnumber" class="ma" type="text" placeholder="Id number" >
+        <input id="course" class="ma" type="text" placeholder="Course">
+        <input id="pnumber" class="ma" type="text"placeholder="Phone number" maxlength="10">
+        <input id="email" class="ma" type="text" placeholder="E-mail">
+        <button id="button" class="ma" onclick="myfunction()">Enter</button>
+    </div>  
+    
+    <div id="right">
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Id number</th>
+                <th>Course</th>
+                <th>Phone number</th>
+                <th>E-mail</th>
+                <th>Remark</th>
+            </tr>
+            
+        </table>
+    </div>    
+
+    </div>  
+</div>
+</body> 
+
+<script>
+    
+    function myfunction(){
+
+    let name= document.getElementById("name").value;
+    let idnumber= document.getElementById("idnumber").value;
+    let course= document.getElementById("course").value;
+    let pnumber= document.getElementById("pnumber").value;
+    let email= document.getElementById("email").value;
+    let table= document.getElementById("table");
+    if(name=='' || idnumber=='' || course=='' || email==''){
+        window.alert("fill the form ")
+    } else {
+
+    let td1=document.createElement("td");
+    let td2=document.createElement("td");
+    let td3=document.createElement("td");
+    let td4=document.createElement("td");
+    let td5=document.createElement("td");
+    let td6=document.createElement("td");
+   
+    
+
+      td1.innerHTML=name;
+      td2.innerHTML=idnumber;
+      td3.innerHTML=course;
+      td4.innerHTML=pnumber;
+      td5.innerHTML=email;
+      td6.innerHTML='<i class="fa-solid fa-trash-can" onclick="deleteRow(this)" ></i>';
+     
+      
+      
+      
+    let tr=document.createElement("tr");
+    tr.append(td1, td2, td3, td4, td5,td6);
+    // tr.appendChild(td2);
+    // tr.appendChild(td3);
+    // tr.appendChild(td4);
+    // tr.appendChild(td5);
+    
+    table.appendChild(tr);
+    document.getElementById("name").value = '';
+    idnumber= document.getElementById("idnumber").value = '';
+     course= document.getElementById("course").value = '';
+     pnumber= document.getElementById("pnumber").value ='';
+     email= document.getElementById("email").value ='';
+     table= document.getElementById("table");
+     console.log(table);
+    }
+
+    
+}
+function deleteRow(is){
+
+    console.log(is.parentNode.parentNode.remove());
+}
+
+
+
+</script>
+</html>

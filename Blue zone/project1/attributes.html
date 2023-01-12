@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="attributes.css">
+
+</head>
+
+<body>
+    <div class="centiner">
+        <div class="left">
+            <div id="temp">
+                <img src="pic1.webp" alt="" onclick="img1(this)" onmouseover="img2(this)"
+                    onmouseleave="changeable(this)" id="color1">
+            </div>
+            <img src="pic2.jpg" alt="" onclick="img1(this)" onmouseover="img2(this)" onmouseleave="changeable(this)"
+                id="color2">
+            <img src="pic3.jpg" alt="" onclick="img1(this)" onmouseover="img2(this)" onmouseleave="changeable(this)"
+                id="color3">
+            <img src="pic4.jpg" alt="" onclick="img1(this)" onmouseover="img2(this)" onmouseleave="changeable(this)"
+                id="color4">
+            <img src="pic5.webp" alt="" onclick="img1(this)" onmouseover="img2(this)" onmouseleave="changeable(this)"
+                id="color5">
+        </div>
+
+        <div class="right">
+            <img src="pic7.jpg" alt="" id="pics">
+        </div>
+
+        <script>
+
+            var frun;
+
+            function img1(items) {
+                let right = document.getElementById('pics');
+                let left = items.getAttribute('src');
+                right.setAttribute('src', left);
+                frun = false;
+            }
+
+            function img2(items) {
+                let right = document.getElementById('pics');
+                let left = items.getAttribute('src');
+                right.setAttribute('src', left);
+                frun = true;
+            }
+
+
+            function changeable(the) {
+                if (frun == true) {
+                    let right = document.getElementById('pics');
+                    right.setAttribute('src', 'pic7.jpg');
+
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

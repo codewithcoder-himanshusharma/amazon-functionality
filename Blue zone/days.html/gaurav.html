@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="main">
+        <li>c language</li>
+    </ul>
+   <div id="text"></div>
+    <script>
+        // let app = document.querySelector('#main');
+        // let fruits = ["mango","orange","apple"];
+        // let nodes = fruits.map(function(items){
+        //     let li = document.createElement('li');
+        //     li.innerHTML=items;
+        //     return li;
+        //     // console.log(fruits)
+        // })
+        // app.append(...nodes);
+
+
+            let ul = document.querySelector('#main');
+            let languages = ['c++','java','Html'];
+            let nodes = languages.map(function(item){
+                let li = document.createElement('li');
+                li.innerHTML=item;
+                return li;
+                
+            })
+            ul.append(...nodes);
+            console.log(ul)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      
+        table, td{
+            
+            border: 1px solid green;
+            border-collapse: collapse;
+            padding: 10px;
+                       
+        }
+      
+       
+            
+      
+
+    </style>
+
+</head>
+<body>
+    <div class="table">
+    <input id="text" type="text" onkeyup="search()">
+    <table id="table">
+        <tr >
+            <td>Mohit</td>
+            <td>Rohit</td>
+        </tr>
+        <tr >
+            <td>vikash</td>
+            <td>Deepak</td>
+        </tr>
+        <tr >
+            <td>Rahul</td>
+            <td>Piryanshu</td>
+        </tr>
+        <tr >
+            <td>Tushar</td>
+            <td>Rishabh</td>
+        </tr>
+        <tr >
+            <td>sanjay</td>
+            <td>mukesh</td>
+        </tr>
+    </table>
+    </div>
+<script>
+    function search(){ 
+        let text = document.getElementById("text").value.toUpperCase();
+        let tr = document.getElementsByTagName('tr');
+        // console.log(text)
+        for(let i=0; i<tr.length; i++){
+            let element= tr[i].firstElementChild.textContent.toUpperCase();
+            
+            if(element.indexOf(text)>-1){
+                tr[i].style.display =''; 
+            }else{
+                tr[i].style.display ='none';
+            }
+            console.log(text)
+
+
+        }
+
+
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.centiner{
+    display: flex;
+    margin: 80px 0px;
+    /* border: 2px solid black; */
+    /* display: block; */
+    /* flex-direction: column; */
+    /* width: 50%; */
+    
+    justify-content: center;
+}
+img{
+    border: 1px solid black;
+    width: 100%;
+}
+.left{
+    width: 6%;
+    margin-right: 8px;
+    
+}
+#temp:hover{
+    /* background-image: 'pic2.jpg'; */
+    box-shadow: 5px 5xp 10px rgb(71, 71, 225);
+    /* border-radius: 20px; */
+    /* width: 100px; */
+     
+}
+.right{
+    width: 31.6% ;
+    
+}
